@@ -160,8 +160,16 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                 dispose();
 
             } else if (sourceButton.equals(showTweetsButton)) {
+                // check if user is selected
+                if (usersTable.getSelectedRow() == -1) {
 
-               System.out.println("Show Tweets Clicked");
+                    JOptionPane.showMessageDialog(outerClass, "You need to select a user to show tweets for",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    // Show the selected user's tweets
+                }
 
             } else if (sourceButton.equals(updateButton)) {
 
@@ -183,10 +191,16 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                 }
             }
             else if (sourceButton.equals(addTweetButton)) {
+                // check if user is selected
+                if (usersTable.getSelectedRow() == -1) {
 
-                //Launch a dialog for the tweet
-                AddTweetDialog addTweetDialog = new AddTweetDialog(this.outerClass, "Compose your tweet");
-                addTweetDialog.setVisible(true);
+                    JOptionPane.showMessageDialog(outerClass, "You need to select a user to add a tweet to",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    //Launch a dialog for the tweet, passing in the index of the selected user
+                    AddTweetDialog addTweetDialog = new AddTweetDialog(this.outerClass, "Compose your tweet", usersTable.getSelectedRow());
+                    addTweetDialog.setVisible(true);
+                }
             }
 
              //This is the code that responds to the delete button

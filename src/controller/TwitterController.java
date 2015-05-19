@@ -104,6 +104,15 @@ public class TwitterController {
         this.dataModel.set(index, tempUser);
         this.gui.refreshGUI();
     }
+
+    public void addTweetToUser(int index, Tweet tweet) {
+        // Get the user to add the tweet to.
+        TwitterUser tempUser = TwitterController.getInstance().getDataModel().get(index);
+        // Add the tweet to the user.
+        tempUser.addTweet(tweet);
+        // Update the data model.
+        TwitterController.getInstance().getDataModel().set(index, tempUser);
+    }
 //
 //    public void save()
 //    {

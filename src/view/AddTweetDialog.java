@@ -2,13 +2,14 @@ package view;
 
 
 import controller.TwitterController;
+import model.Tweet;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.Date;
 
 
 public class AddTweetDialog extends JDialog {
@@ -16,14 +17,14 @@ public class AddTweetDialog extends JDialog {
     private JPanel mainPanel;
     private JTextArea txtTweet;
     private JButton btnTweet, btnCancel;
+    private int index;
 
 
 
-
-    public AddTweetDialog(Frame owner, String title) {
+    public AddTweetDialog(Frame owner, String title, int index) {
 
         super(owner, title);
-
+        this.index = index;
 
         mainPanel = new JPanel();
 
@@ -66,16 +67,10 @@ public class AddTweetDialog extends JDialog {
         txtTweet.setLineWrap(true);
 
         //  create a line border with the specified color and width
-
-        Border border = BorderFactory.createLineBorder(Color.gray, 5);
+        Border border = BorderFactory.createLineBorder(Color.gray, 1);
 
         // set the border to the textfield
-
         txtTweet.setBorder(border);
-
-
-
-
 
         // add the textarea to the center panel
         centerPanel.add(txtTweet);
@@ -120,6 +115,13 @@ public class AddTweetDialog extends JDialog {
             JButton sourceButton = (JButton) e.getSource();
 
             if (sourceButton.equals(btnTweet)) {
+                // Get the text from the textArea
+                String tweet = txtTweet.getText();
+                // Create a new Tweet object and initialise the date
+                Date d = new Date(System.currentTimeMillis());
+                Tweet newTweet = new Tweet(tweet, d);
+                // Add the tweet to the user
+                TwitterController.getInstance().addTweetToUser(index, newTweet);
                 System.out.println("Tweet button clicked");
                 dispose();
             } else if (sourceButton.equals(btnCancel)) {

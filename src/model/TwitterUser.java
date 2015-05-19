@@ -42,4 +42,8 @@ public class TwitterUser {
     public void setTweets(ArrayList<Tweet> tweets) {
         this.tweets = tweets;
     }
+
+    public void addTweet(Tweet tweet) {
+        this.tweets.add(tweet);
+    }
 }
