@@ -166,9 +166,10 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                     JOptionPane.showMessageDialog(outerClass, "You need to select a user to show tweets for",
                             "Error", JOptionPane.ERROR_MESSAGE);
                 }
-                else
-                {
+                else {
                     // Show the selected user's tweets
+                    ShowTweetsDialog showTweetsDlg = new ShowTweetsDialog(this.outerClass, "Tweets", usersTable.getSelectedRow());
+                    showTweetsDlg.setVisible(true);
                 }
 
             } else if (sourceButton.equals(updateButton)) {

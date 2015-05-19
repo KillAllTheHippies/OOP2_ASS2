@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d2e4f5-edc9-4943-b134-2e31c7f20eab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/AddTweetDialog.java" afterPath="$PROJECT_DIR$/src/view/AddTweetDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/TwitterController.java" afterPath="$PROJECT_DIR$/src/controller/TwitterController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/ShowTweetsDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/TwitterFrame.java" afterPath="$PROJECT_DIR$/src/view/TwitterFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/TwitterUser.java" afterPath="$PROJECT_DIR$/src/model/TwitterUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP2_ASS2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,13 +74,23 @@
       <file leaf-file-name="TwitterFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7172557">
-              <caret line="170" column="54" selection-start-line="170" selection-start-column="54" selection-end-line="170" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.7879418">
+              <caret line="171" column="49" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4872#4873#0" expanded="true" />
                 <element signature="e#4924#4925#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowTweetsDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/ShowTweetsDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,16 +153,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ITwitterGUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ITwitterGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -186,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/model/TwitterUser.java" />
         <option value="$PROJECT_DIR$/src/controller/TwitterController.java" />
         <option value="$PROJECT_DIR$/src/view/AddTweetDialog.java" />
+        <option value="$PROJECT_DIR$/src/view/ShowTweetsDialog.java" />
         <option value="$PROJECT_DIR$/src/view/TwitterFrame.java" />
       </list>
     </option>
@@ -596,19 +596,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/TwitterUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/TwitterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1161,10 +1148,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ShowTweetsDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7172557">
-          <caret line="170" column="54" selection-start-line="170" selection-start-column="54" selection-end-line="170" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.7879418">
+          <caret line="171" column="49" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4872#4873#0" expanded="true" />
