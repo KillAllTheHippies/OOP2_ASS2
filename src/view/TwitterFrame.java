@@ -17,11 +17,12 @@ import java.util.ArrayList;
 
 public class TwitterFrame extends JFrame implements ITwitterGUI{
 
-    private JButton addButton;
+    private JButton addUserButton;
     private JButton closeButton;
     private JButton showTweetsButton;
     private JButton deleteButton;
     private JButton updateButton;
+    private JButton addTweetButton;
     private JTable usersTable;
     private TwitterTableModel tableModel;
 
@@ -55,24 +56,14 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
 
     private JScrollPane createTableScrollPane() {
 
-        // Create a table and a scrollpane, add patients to an arraylist, connect the arraylist
+        // Create a table and a scrollpane, get the datamodel, connect the datamodel
         // to the table model, connect the table model to the table, put the table in a scrollpane,
         // and return the scrollpane
+
         usersTable = new JTable();
-
-
         ArrayList<TwitterUser> tempUsers = TwitterController.getInstance().getDataModel();
-
-        //TwitterUser t1 = new TwitterUser("Billy", "Nowhere");
-
-
-        //tempUsers.add(t1);
-
-
-
         this.tableModel = new TwitterTableModel(tempUsers);
         usersTable.setModel(tableModel);
-
 
         JScrollPane tableScrollPane = new JScrollPane(usersTable);
         return tableScrollPane;
@@ -105,31 +96,35 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
 
     private JPanel createSideButtonPanel() {
         // instantiate the buttons
-        this.addButton = new JButton("Add User");
+        this.addUserButton = new JButton("Add User");
         this.deleteButton = new JButton("Delete User");
         this.updateButton = new JButton("Update User");
         this.showTweetsButton = new JButton("Show Tweets");
+        this.addTweetButton = new JButton("Add Tweet");
 
 
         // Instantiate the listener for the buttons,
         // passing it in a reference to this class (SurgeryFrame)
         // and assign it to the buttons
         ButtonsActionListener buttonListener = new ButtonsActionListener(this);
-        addButton.addActionListener(buttonListener);
+        addUserButton.addActionListener(buttonListener);
         deleteButton.addActionListener(buttonListener);
         showTweetsButton.addActionListener(buttonListener);
         updateButton.addActionListener(buttonListener);
+        addTweetButton.addActionListener(buttonListener);
 
         // Create panel, assign layout, add components.
         JPanel sideButtonPanel = new JPanel();
         sideButtonPanel.setLayout(new BoxLayout(sideButtonPanel, BoxLayout.Y_AXIS));
-        sideButtonPanel.add(addButton);
+        sideButtonPanel.add(addUserButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(deleteButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(updateButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(showTweetsButton);
+        sideButtonPanel.add(Box.createVerticalStrut(5));
+        sideButtonPanel.add(addTweetButton);
 
         return sideButtonPanel;
     }
@@ -150,7 +145,7 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
             //Listener for button clicks.
             JButton sourceButton = (JButton) e.getSource();
 
-            if (sourceButton.equals(addButton)) {
+            if (sourceButton.equals(addUserButton)) {
 
                 // Launch a dialog and set its size when the add button is clicked
                 AddUserDialog addPatDlg =
@@ -186,6 +181,12 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                             new UpdateUserDialog(this.outerClass, "Update User", usersTable.getSelectedRow(),tempUser );
                     updateUserDlg.setVisible(true);
                 }
+            }
+            else if (sourceButton.equals(addTweetButton)) {
+
+                //Launch a dialog for the tweet
+                AddTweetDialog addTweetDialog = new AddTweetDialog(this.outerClass, "Compose your tweet");
+                addTweetDialog.setVisible(true);
             }
 
              //This is the code that responds to the delete button
