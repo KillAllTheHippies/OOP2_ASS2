@@ -98,6 +98,12 @@ public class TwitterController {
         this.dataModel.remove(index);
         this.gui.refreshGUI();
     }
+
+    public void updateUser(int index, String name, String country) {
+        TwitterUser tempUser = new TwitterUser(name, country);
+        this.dataModel.set(index, tempUser);
+        this.gui.refreshGUI();
+    }
 //
 //    public void save()
 //    {

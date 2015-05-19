@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6d2e4f5-edc9-4943-b134-2e31c7f20eab" name="Default" comment="" />
+    <list default="true" id="a6d2e4f5-edc9-4943-b134-2e31c7f20eab" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/UpdateUserDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/TwitterController.java" afterPath="$PROJECT_DIR$/src/controller/TwitterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/TwitterFrame.java" afterPath="$PROJECT_DIR$/src/view/TwitterFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="OOP2_ASS2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TwitterController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/TwitterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7879418">
-              <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1716#1717#0" expanded="true" />
@@ -54,11 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
+      <file leaf-file-name="UpdateUserDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/UpdateUserDialog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="191" column="59" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
+              <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.96465695">
+              <caret line="207" column="65" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4716#4717#0" expanded="true" />
@@ -161,8 +176,9 @@
         <option value="$PROJECT_DIR$/src/view/DialogHorizPanel.java" />
         <option value="$PROJECT_DIR$/src/model/TwitterUser.java" />
         <option value="$PROJECT_DIR$/src/view/AddUserDialog.java" />
-        <option value="$PROJECT_DIR$/src/view/TwitterFrame.java" />
         <option value="$PROJECT_DIR$/src/controller/TwitterController.java" />
+        <option value="$PROJECT_DIR$/src/view/UpdateUserDialog.java" />
+        <option value="$PROJECT_DIR$/src/view/TwitterFrame.java" />
       </list>
     </option>
   </component>
@@ -297,6 +313,11 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="view" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.MainApplication">
     <configuration default="false" name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -558,13 +579,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/TwitterController.java</url>
-          <line>79</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
@@ -574,14 +588,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/ITwitterGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Tweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1087,22 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="191" column="59" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4716#4717#0" expanded="true" />
-            <element signature="e#4768#4769#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/TwitterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7879418">
-          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1716#1717#0" expanded="true" />
@@ -1113,6 +1107,26 @@
             <element signature="e#1937#1938#0" expanded="true" />
             <element signature="e#1985#1986#0" expanded="true" />
             <element signature="e#2016#2017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/UpdateUserDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96465695">
+          <caret line="207" column="65" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4716#4717#0" expanded="true" />
+            <element signature="e#4768#4769#0" expanded="true" />
           </folding>
         </state>
       </provider>

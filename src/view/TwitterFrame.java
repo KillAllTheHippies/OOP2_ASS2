@@ -171,7 +171,21 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
             } else if (sourceButton.equals(updateButton)) {
 
                 System.out.println("Update Clicked");
+                // check if row is selected
+                if (usersTable.getSelectedRow() == -1) {
 
+                    JOptionPane.showMessageDialog(outerClass, "You need to select a user to update",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                // If table row is selected then launch update dialog
+                else {
+                    // Get the user from the data model
+                    TwitterUser tempUser = TwitterController.getInstance().getDataModel().get(usersTable.getSelectedRow());
+                    // Create the update dialog and pass in the index and the user
+                    UpdateUserDialog updateUserDlg =
+                            new UpdateUserDialog(this.outerClass, "Update User", usersTable.getSelectedRow(),tempUser );
+                    updateUserDlg.setVisible(true);
+                }
             }
 
              //This is the code that responds to the delete button
