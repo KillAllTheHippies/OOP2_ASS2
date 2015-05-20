@@ -110,12 +110,14 @@ public class TwitterController {
     }
 
     public void addTweetToUser(int index, Tweet tweet) {
-        // Get the user to add the tweet to.
-        TwitterUser tempUser = TwitterController.getInstance().getDataModel().get(index);
+        // Get the user to add the tweet to from the data model.
+        TwitterUser tempUser = dataModel.get(index);
         // Add the tweet to the user.
         tempUser.addTweet(tweet);
         // Update the data model.
-        TwitterController.getInstance().getDataModel().set(index, tempUser);
+        dataModel.set(index, tempUser);
+        // Add the tweet to the database
+        persistor.addTweetToUser(tempUser.getUserName(), tweet);
     }
 
     public void save() {

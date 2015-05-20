@@ -1,5 +1,6 @@
 package controller;
 
+import model.Tweet;
 import model.TwitterUser;
 
 import java.util.ArrayList;
@@ -10,4 +11,5 @@ import java.util.ArrayList;
 public interface IPersistor {
     public void write(ArrayList<TwitterUser> dataModel);
     public ArrayList<TwitterUser> read();
+    public void addTweetToUser(String name, Tweet tweet);
 }

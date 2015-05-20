@@ -7,7 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
+import model.Tweet;
 import model.TwitterUser;
 
 public class DatabasePersistor implements IPersistor {
@@ -99,6 +101,26 @@ public class DatabasePersistor implements IPersistor {
         return usersList;
     }
 
+    public void addTweetToUser(String name, Tweet tweet) {
+        try
+        {
+            PreparedStatement insertTweetRow =
+                    dbConnection.prepareStatement("INSERT into TWEETS values (?,?,?)");
+            insertTweetRow.setString(1, name);
+            insertTweetRow.setString(2, tweet.getTweetText());
 
+            Date tweetDate = tweet.getDateTimeSent();
+            long timeInMillis = tweetDate.getTime();
+
+            insertTweetRow.setString(3, Long.toString(timeInMillis));
+
+            insertTweetRow.executeUpdate();
+            insertTweetRow.close();
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+    }
 
 }
