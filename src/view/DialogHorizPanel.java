@@ -41,18 +41,14 @@ public class DialogHorizPanel extends JPanel {
         // set the width of the text field to the width of parent container
         // minus the width of the label plus some padding
         textField.setSize(new Dimension(this.getParent().getWidth() - (w + padding), h));
-
     }
 
 
-    // For future implementation
     public String getTextFieldText() {
         return textField.getText();
     }
 
-    // For future implementation
     public void setTextFieldText(String s) {
-
         textField.setText(s);
     }
 }

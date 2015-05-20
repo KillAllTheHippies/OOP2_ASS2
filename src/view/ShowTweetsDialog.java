@@ -41,9 +41,6 @@ public class ShowTweetsDialog extends JDialog {
         JPanel centerPanel = createCenterPanel();
         mainPanel.add(centerPanel, BorderLayout.CENTER);
 
-
-
-
         // add the main panel to the dialog
         this.getContentPane().add(mainPanel);
 
@@ -52,7 +49,7 @@ public class ShowTweetsDialog extends JDialog {
 
 
         this.setSize(350, 180);
-        this.setResizable(false);
+        this.setResizable(true);
 
 
     }
@@ -65,12 +62,24 @@ public class ShowTweetsDialog extends JDialog {
 
 
         // Create our text area
-        this.txtTweets = new JTextArea( 6, 30);
+        this.txtTweets = new AutoResizingJTextArea();
         txtTweets.setLineWrap(true);
         txtTweets.setEditable(false);
+        //TODO: configure the textarea so it dynamically fills the area when the window is resized
 
-        // Populate the text area with tweets
-        displayTweets();
+        // Get the tweets from the datamodel
+        ArrayList<Tweet> tweets = TwitterController.getInstance().getDataModel().get(index).getTweets();
+
+        // Populate if there are tweets, display message if not.
+        if (tweets.isEmpty()) {
+            txtTweets.setText("No tweets!");
+        }
+        else // Populate the text area with tweets
+        {
+            for (Tweet t : tweets) {
+                txtTweets.append(t.toString());
+            }
+        }
 
         //  create a line border with the specified color and width
         Border border = BorderFactory.createLineBorder(Color.gray, 1);
@@ -87,19 +96,6 @@ public class ShowTweetsDialog extends JDialog {
         return centerPanel;
     }
 
-    public void displayTweets() {
-        //Get the tweets from the datamodel
-        ArrayList<Tweet> tweets = TwitterController.getInstance().getDataModel().get(index).getTweets();
-
-        // Create a string from the tweet text and the date sent and append them to the textarea
-        for (Tweet t : tweets) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            String tweetString = dateFormat.format(t.getDateTimeSent()) + ": " + t.getTweetText() + "\n" ;
-            txtTweets.append(tweetString);
-        }
-
-
-    }
 
     public JPanel createBottomPanel() {
 

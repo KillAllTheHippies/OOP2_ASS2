@@ -100,8 +100,14 @@ public class TwitterController {
     }
 
     public void updateUser(int index, String name, String country) {
-        TwitterUser tempUser = new TwitterUser(name, country);
+        // Get the user from the datamodel
+        TwitterUser tempUser = dataModel.get(index);
+        // Update the name and country of the user
+        tempUser.setUserName(name);
+        tempUser.setCountry(country);
+        // Replace the old user with the updated user.
         this.dataModel.set(index, tempUser);
+        // Refresh the GUI
         this.gui.refreshGUI();
     }
 
