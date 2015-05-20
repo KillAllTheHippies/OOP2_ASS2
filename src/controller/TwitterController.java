@@ -27,18 +27,19 @@ public class TwitterController {
 
     /////EVERYTHING BELOW THIS IS THE "INSTANCE PART"
 
-
+    // ArrayList to store the newly added users
+    private ArrayList<TwitterUser> newlyAddedUsers;
     //Reference to the data model
 
     private ArrayList<TwitterUser> dataModel;
-    private ArrayList<Tweet> tweets;
+    //private ArrayList<Tweet> tweets;
     //Reference to the GUI
     //Any GUI which implements this interface can be
     //communicated with by this controller.
     private ITwitterGUI gui;
 
     //Add a reference to the persistor.
-    //private IPersistor persistor;
+    private IPersistor persistor;
 
     //Default constructor
     //Making this private means that it can only be called
@@ -46,53 +47,50 @@ public class TwitterController {
     //method can call this now. Nobody outside this class
     //can create an instance of it.
     private TwitterController() {
+
+        this.newlyAddedUsers = new ArrayList<TwitterUser>();
         //Initialise the data model
-        this.dataModel = new ArrayList<TwitterUser>();
-        this.tweets = new ArrayList<Tweet>();
+        //this.dataModel = new ArrayList<TwitterUser>();
+        //this.tweets = new ArrayList<Tweet>();
     }
 
-    public void setDataModel(ArrayList<TwitterUser> dataModel)
-    {
+    public void setDataModel(ArrayList<TwitterUser> dataModel) {
         this.dataModel = dataModel;
     }
 
-    public ArrayList<TwitterUser> getDataModel()
-    {
+    public ArrayList<TwitterUser> getDataModel() {
         return this.dataModel;
     }
 
-    public void setGuiReference(ITwitterGUI gui)
-    {
+    public void setGuiReference(ITwitterGUI gui) {
         this.gui = gui;
     }
 
-    public ITwitterGUI getGuiReference()
-    {
+    public ITwitterGUI getGuiReference() {
         return this.gui;
     }
 
-//    public void setPersistor(IPersistor persistor)
-//    {
-//        this.persistor = persistor;
-//    }
-//
-//    public IPersistor getPersistor()
-//    {
-//        return this.persistor;
-//    }
-//
-//
+    public void setPersistor(IPersistor persistor) {
+        this.persistor = persistor;
+    }
+
+    public IPersistor getPersistor() {
+        return this.persistor;
+    }
+
+
     //This method will be called by the VIEW layer and pass
-    //the information filled in in the Add Player dialog of the
+    //the information filled in in the Add User dialog of the
     //GUI.
-	public void createUser(String name, String country)
-	{
-		TwitterUser u = new TwitterUser(name, country);
+    public void createUser(String name, String country) {
+        TwitterUser u = new TwitterUser(name, country);
+        // Update the datamodel
         this.dataModel.add(u);
-        //Inform the GUI that the data model has been updated.
-		//This means the GUI will refresh itself.
-		this.gui.refreshGUI();
-	}
+        // Add the user to the arraylist of new users
+        this.newlyAddedUsers.add(u);
+        // Refresh the GUI
+        this.gui.refreshGUI();
+    }
 
     public void deleteUser(int index) {
         this.dataModel.remove(index);
@@ -119,11 +117,10 @@ public class TwitterController {
         // Update the data model.
         TwitterController.getInstance().getDataModel().set(index, tempUser);
     }
-//
-//    public void save()
-//    {
-//        this.persistor.write(this.dataModel);
-//        this.dataModel.clear();
-//    }
+
+    public void save() {
+        this.persistor.write(this.newlyAddedUsers);
+        this.newlyAddedUsers.clear();
+    }
 
 }

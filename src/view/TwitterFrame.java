@@ -148,12 +148,12 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
             if (sourceButton.equals(addUserButton)) {
 
                 // Launch a dialog and set its size when the add button is clicked
-                AddUserDialog addPatDlg =
+                AddUserDialog addUserDlg =
                         new AddUserDialog(this.outerClass, "Add User");
 
                 //addPatDlg.setSize(600, 200);
 
-                addPatDlg.setVisible(true);
+                addUserDlg.setVisible(true);
 
             } else if (sourceButton.equals(closeButton)) {
 
