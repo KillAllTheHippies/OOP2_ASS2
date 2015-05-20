@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import model.Tweet;
@@ -87,6 +88,10 @@ public class DatabasePersistor implements IPersistor {
                 //the row in the database.
                 TwitterUser t =
                         new TwitterUser(currentName, currCountry);
+
+                // Populate the user with their tweets
+                t.setTweets(getUserTweets(currentName));
+                // Add the user to the arraylist which will be returned by this method
                 usersList.add(t);
             }
             getAllUsersStmt.close();
@@ -99,6 +104,35 @@ public class DatabasePersistor implements IPersistor {
         }
 
         return usersList;
+    }
+
+    public ArrayList<Tweet> getUserTweets(String userName)
+    {
+        ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+        try
+        {
+            PreparedStatement getUsersTweets =
+                    dbConnection.prepareStatement("SELECT * FROM TWEETS WHERE name=?");
+            getUsersTweets.setString(1, userName);
+            ResultSet tweetSet = getUsersTweets.executeQuery();
+            //Process the ResultSet
+            while(tweetSet.next())
+            {
+                String strTweet = tweetSet.getString("Tweet");
+                String date = tweetSet.getString("DateTime");
+                Calendar cal = 	Calendar.getInstance();
+                cal.setTimeInMillis(Long.parseLong(date));
+
+                Tweet tweet = new Tweet(strTweet, cal.getTime());
+                tweets.add(tweet);
+            }
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+        return tweets;
+
     }
 
     public void addTweetToUser(String name, Tweet tweet) {
