@@ -78,14 +78,14 @@ public class DatabasePersistor implements IPersistor {
 
             while(rs.next())
             {
-                //Give me the data in column 'name' at the row
-                //at which the ResultSet is currently pointing at.
+                // Give me the data in column 'name' at the row
+                // at which the ResultSet is currently pointing at.
                 String currentName = rs.getString("Name");
                 String currCountry = rs.getString("Country");
 
-                //Re-create a TwitterUser object and initialize it
-                //with the raw data we have just extracted from
-                //the row in the database.
+                // Re-create a TwitterUser object and initialize it
+                // with the raw data we have just extracted from
+                // the row in the database.
                 TwitterUser t =
                         new TwitterUser(currentName, currCountry);
 
@@ -155,6 +155,34 @@ public class DatabasePersistor implements IPersistor {
         {
             System.out.println(sqlEx.getMessage());
         }
+    }
+    public void deleteUser(String name) {
+        try
+        {
+            // Delete the user from the database where name matches.
+            PreparedStatement deleteUserRow =
+                    dbConnection.prepareStatement("DELETE from USERS WHERE Name='" + name + "'");
+            deleteUserRow.executeUpdate();
+            deleteUserRow.close();
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+        // Delete the tweets from the database that match the name
+        try
+        {
+            // Delete the user from the database where name matches.
+            PreparedStatement deleteTweets =
+                    dbConnection.prepareStatement("DELETE from TWEETS WHERE Name='" + name + "'");
+            deleteTweets.executeUpdate();
+            deleteTweets.close();
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+
     }
 
 }

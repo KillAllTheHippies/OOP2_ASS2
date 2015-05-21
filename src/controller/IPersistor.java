@@ -12,4 +12,5 @@ public interface IPersistor {
     public void write(ArrayList<TwitterUser> dataModel);
     public ArrayList<TwitterUser> read();
     public void addTweetToUser(String name, Tweet tweet);
+    public void deleteUser(String name);
 }

@@ -113,8 +113,8 @@ public class AddUserDialog extends JDialog {
             JButton sourceButton = (JButton) e.getSource();
 
             if (sourceButton.equals(btnAddUser)) {
+                // Get the information from the textFields and pass it to the createUser method of the controller
                 TwitterController.getInstance().createUser(namePanel.getTextFieldText(), countryPanel.getTextFieldText());
-                TwitterController.getInstance().save();
                 dispose();
             } else if (sourceButton.equals(btnClose)) {
 

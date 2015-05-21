@@ -88,12 +88,23 @@ public class TwitterController {
         this.dataModel.add(u);
         // Add the user to the arraylist of new users
         this.newlyAddedUsers.add(u);
+        // Commit the user to the database
+        // (I have decided to commit each new user as they are added instead of adding a batch of new users
+        // and committing them with a save button or on close. I thought because of the scale of this program
+        // that this is the preferable way to do it so as to avoid loss of data if the program crashes
+        // or there is a power loss. I have left in the functionality to add batches.)
+        save();
         // Refresh the GUI
         this.gui.refreshGUI();
     }
 
     public void deleteUser(int index) {
+        String userName = this.dataModel.get(index).getUserName();
+        // Remove the user from the datamodel
         this.dataModel.remove(index);
+        // Delete the user from the database
+        // Pass in the name of the user to be deleted to the deleteUser method of DatabasePersistor
+        this.persistor.deleteUser(userName);
         this.gui.refreshGUI();
     }
 
@@ -117,7 +128,7 @@ public class TwitterController {
         // Update the data model.
         dataModel.set(index, tempUser);
         // Add the tweet to the database
-        persistor.addTweetToUser(tempUser.getUserName(), tweet);
+        this.persistor.addTweetToUser(tempUser.getUserName(), tweet);
     }
 
     public void save() {
