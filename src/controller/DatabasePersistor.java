@@ -156,6 +156,40 @@ public class DatabasePersistor implements IPersistor {
             System.out.println(sqlEx.getMessage());
         }
     }
+    public void updateUser(String name, String country, String currentUser) {
+        // Update the user's information
+        try
+        {
+            PreparedStatement updateUserStmt =
+                    dbConnection.prepareStatement("UPDATE users SET Name=?, Country=? WHERE Name=?");
+            updateUserStmt.setString(1, name);
+            updateUserStmt.setString(2, country);
+            updateUserStmt.setString(3, currentUser);
+
+            updateUserStmt.executeUpdate();
+            updateUserStmt.close();
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+        // Update the name in the tweets table so the user's tweets stay connected to the user.
+        try
+        {
+            PreparedStatement updateTweetsStmt =
+                    dbConnection.prepareStatement("UPDATE tweets SET Name=? WHERE Name=?");
+            updateTweetsStmt.setString(1, name);
+            updateTweetsStmt.setString(2, currentUser);
+
+
+            updateTweetsStmt.executeUpdate();
+            updateTweetsStmt.close();
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.println(sqlEx.getMessage());
+        }
+    }
     public void deleteUser(String name) {
         try
         {
@@ -172,7 +206,6 @@ public class DatabasePersistor implements IPersistor {
         // Delete the tweets from the database that match the name
         try
         {
-            // Delete the user from the database where name matches.
             PreparedStatement deleteTweets =
                     dbConnection.prepareStatement("DELETE from TWEETS WHERE Name='" + name + "'");
             deleteTweets.executeUpdate();

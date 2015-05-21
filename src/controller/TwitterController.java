@@ -111,11 +111,18 @@ public class TwitterController {
     public void updateUser(int index, String name, String country) {
         // Get the user from the datamodel
         TwitterUser tempUser = dataModel.get(index);
+
+        // Get the name of the user before it is changed
+        String currentUserName = tempUser.getUserName();
+
         // Update the name and country of the user
         tempUser.setUserName(name);
         tempUser.setCountry(country);
-        // Replace the old user with the updated user.
+
+        // Update the datamodel with the new user.
         this.dataModel.set(index, tempUser);
+        // Update the database, pass in the original name, new name and new country
+        this.persistor.updateUser(name, country, currentUserName);
         // Refresh the GUI
         this.gui.refreshGUI();
     }
