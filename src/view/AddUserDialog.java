@@ -2,6 +2,7 @@ package view;
 
 
 import controller.TwitterController;
+import view.components.DialogHorizPanel;
 
 import javax.swing.*;
 
@@ -58,18 +59,13 @@ public class AddUserDialog extends JDialog {
         // create the panel
         JPanel centerPanel = new JPanel();
 
-        // set a layout
-
         // Set vertical box layout on the main panel
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.PAGE_AXIS));
-
 
         // Create our 2 horizontal panels (custom component extended from JPanel)
         // and pass in the text for the label
         this.namePanel = new DialogHorizPanel(USERNAME_LABEL);
         this.countryPanel = new DialogHorizPanel(COUNTRY_LABEL);
-
-
 
         // add the panels to the center panel
         centerPanel.add(namePanel);
@@ -106,12 +102,9 @@ public class AddUserDialog extends JDialog {
         }
 
         public void actionPerformed(ActionEvent e) {
-            //We know that the source of any ActionEvent
-            //in this program MUST be a JButton seeing as
-            //we only added an instance of this listener to
-            //JButton objects
-            JButton sourceButton = (JButton) e.getSource();
 
+            JButton sourceButton = (JButton) e.getSource();
+            // ------------------ADD USER BUTTON------------------
             if (sourceButton.equals(btnAddUser)) {
                 // Get the information from the textFields and pass it to the createUser method of the controller
                 TwitterController.getInstance().createUser(namePanel.getTextFieldText(), countryPanel.getTextFieldText());

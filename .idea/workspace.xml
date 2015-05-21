@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d2e4f5-edc9-4943-b134-2e31c7f20eab" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Jamie\IdeaProjects\OOP2_ASS2\out\production\OOP2_ASS2\view\AutoResizingJTextArea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jamie\IdeaProjects\OOP2_ASS2\out\production\OOP2_ASS2\view\DialogHorizPanel.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Jamie\IdeaProjects\OOP2_ASS2\src\view\AutoResizingJTextArea.java" afterPath="$PROJECT_DIR$/src/view/components/AutoResizingJTextArea.java" />
+      <change type="MOVED" beforePath="C:\Users\Jamie\IdeaProjects\OOP2_ASS2\src\view\DialogHorizPanel.java" afterPath="$PROJECT_DIR$/src/view/components/DialogHorizPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddTweetDialog$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddTweetDialog$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddTweetDialog.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddTweetDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddUserDialog$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddUserDialog$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddUserDialog.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/AddUserDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/controller/DatabasePersistor.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/controller/DatabasePersistor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/ShowTweetsDialog$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/ShowTweetsDialog$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/ShowTweetsDialog.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/ShowTweetsDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/controller/TwitterController.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/controller/TwitterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/TwitterFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/TwitterFrame$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/TwitterFrame.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/TwitterFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/UpdateUserDialog$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/UpdateUserDialog$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/UpdateUserDialog.class" afterPath="$PROJECT_DIR$/out/production/OOP2_ASS2/view/UpdateUserDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/AddTweetDialog.java" afterPath="$PROJECT_DIR$/src/view/AddTweetDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/AddUserDialog.java" afterPath="$PROJECT_DIR$/src/view/AddUserDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/DatabasePersistor.java" afterPath="$PROJECT_DIR$/src/controller/DatabasePersistor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/IPersistor.java" afterPath="$PROJECT_DIR$/src/controller/IPersistor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainApplication.java" afterPath="$PROJECT_DIR$/src/view/MainApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/ShowTweetsDialog.java" afterPath="$PROJECT_DIR$/src/view/ShowTweetsDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/TwitterController.java" afterPath="$PROJECT_DIR$/src/controller/TwitterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/TwitterFrame.java" afterPath="$PROJECT_DIR$/src/view/TwitterFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/UpdateUserDialog.java" afterPath="$PROJECT_DIR$/src/view/UpdateUserDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP2_ASS2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,99 +47,7 @@
     <favorites_list name="OOP2_ASS2" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TwitterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/TwitterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="64" selection-start-line="124" selection-start-column="64" selection-end-line="124" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPersistor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/IPersistor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabasePersistor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/DatabasePersistor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57588357">
-              <caret line="178" column="42" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1816#1829#0" expanded="true" />
-                <element signature="e#3174#3181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwitterUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/TwitterUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwitterFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="150" column="30" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddUserDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/AddUserDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="113" selection-start-line="115" selection-start-column="113" selection-end-line="115" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddTweetDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/AddTweetDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="80" selection-start-line="123" selection-start-column="80" selection-end-line="123" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -145,7 +75,6 @@
         <option value="$PROJECT_DIR$/DialogHorizPanel.java" />
         <option value="$PROJECT_DIR$/src/view/UpdateUserDialog.java" />
         <option value="$PROJECT_DIR$/src/model/TwitterUser.java" />
-        <option value="$PROJECT_DIR$/src/view/AddTweetDialog.java" />
         <option value="$PROJECT_DIR$/src/model/Tweet.java" />
         <option value="$PROJECT_DIR$/src/view/DialogHorizPanel.java" />
         <option value="$PROJECT_DIR$/src/view/AutoResizingTextArea.java" />
@@ -153,10 +82,11 @@
         <option value="$PROJECT_DIR$/src/view/AutoResizingJTextArea.java" />
         <option value="$PROJECT_DIR$/src/view/IResizable.java" />
         <option value="$PROJECT_DIR$/src/view/IAutoResizable.java" />
-        <option value="$PROJECT_DIR$/src/view/MainApplication.java" />
+        <option value="$PROJECT_DIR$/src/controller/IPersistor.java" />
+        <option value="$PROJECT_DIR$/src/view/AddTweetDialog.java" />
         <option value="$PROJECT_DIR$/src/view/TwitterFrame.java" />
         <option value="$PROJECT_DIR$/src/view/AddUserDialog.java" />
-        <option value="$PROJECT_DIR$/src/controller/IPersistor.java" />
+        <option value="$PROJECT_DIR$/src/view/MainApplication.java" />
         <option value="$PROJECT_DIR$/src/controller/TwitterController.java" />
         <option value="$PROJECT_DIR$/src/controller/DatabasePersistor.java" />
       </list>
@@ -235,6 +165,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP2_ASS2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP2_ASS2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -500,7 +452,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1458" height="918" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -513,7 +465,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17569445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17569445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -540,7 +492,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/TwitterController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/TwitterController.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -600,7 +566,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="7" selection-start-line="56" selection-start-column="2" selection-end-line="125" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -672,7 +647,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="7" selection-start-line="56" selection-start-column="2" selection-end-line="125" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -737,7 +721,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="7" selection-start-line="56" selection-start-column="2" selection-end-line="125" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -790,7 +783,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -833,7 +835,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -869,7 +880,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -982,20 +1002,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/DialogHorizPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/view/components/DialogHorizPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="45" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AutoResizingJTextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1015,24 +1028,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ITwitterGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14137214">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/TwitterUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.989605">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1041,36 +1039,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ITwitterGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14137214">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/AddTweetDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8627858">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/TwitterFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="30" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
+        <state vertical-scroll-proportion="1.4948025">
+          <caret line="219" column="20" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AddTweetDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="80" selection-start-line="123" selection-start-column="80" selection-end-line="123" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/AddUserDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="113" selection-start-line="115" selection-start-column="113" selection-end-line="115" selection-end-column="113" />
+        <state vertical-scroll-proportion="1.8731809">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IPersistor.java">
+    <entry file="file://$PROJECT_DIR$/src/view/components/AutoResizingJTextArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.2827443">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25779626">
+          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1079,20 +1093,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/TwitterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="64" selection-start-line="124" selection-start-column="64" selection-end-line="124" selection-end-column="64" />
-          <folding />
+        <state vertical-scroll-proportion="2.014553">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2077#2078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DatabasePersistor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57588357">
-          <caret line="178" column="42" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.64656967">
+          <caret line="116" column="33" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1816#1829#0" expanded="true" />
-            <element signature="e#3174#3181#0" expanded="true" />
+            <element signature="e#3170#3177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IPersistor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5301455">
+          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

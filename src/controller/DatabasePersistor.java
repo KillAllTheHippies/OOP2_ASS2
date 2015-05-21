@@ -78,7 +78,7 @@ public class DatabasePersistor implements IPersistor {
 
             while(rs.next())
             {
-                // Give me the data in column 'name' at the row
+                // Get the data in column 'name' at the row
                 // at which the ResultSet is currently pointing at.
                 String currentName = rs.getString("Name");
                 String currCountry = rs.getString("Country");
@@ -114,7 +114,9 @@ public class DatabasePersistor implements IPersistor {
             PreparedStatement getUsersTweets =
                     dbConnection.prepareStatement("SELECT * FROM TWEETS WHERE name=?");
             getUsersTweets.setString(1, userName);
+            // Get the result set
             ResultSet tweetSet = getUsersTweets.executeQuery();
+
             //Process the ResultSet
             while(tweetSet.next())
             {
@@ -145,7 +147,6 @@ public class DatabasePersistor implements IPersistor {
 
             Date tweetDate = tweet.getDateTimeSent();
             long timeInMillis = tweetDate.getTime();
-
             insertTweetRow.setString(3, Long.toString(timeInMillis));
 
             insertTweetRow.executeUpdate();
@@ -180,7 +181,6 @@ public class DatabasePersistor implements IPersistor {
                     dbConnection.prepareStatement("UPDATE tweets SET Name=? WHERE Name=?");
             updateTweetsStmt.setString(1, name);
             updateTweetsStmt.setString(2, currentUser);
-
 
             updateTweetsStmt.executeUpdate();
             updateTweetsStmt.close();

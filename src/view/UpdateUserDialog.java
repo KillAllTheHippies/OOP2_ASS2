@@ -3,6 +3,7 @@ package view;
 
 import controller.TwitterController;
 import model.TwitterUser;
+import view.components.DialogHorizPanel;
 
 import javax.swing.*;
 import java.awt.*;

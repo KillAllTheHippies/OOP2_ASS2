@@ -104,7 +104,7 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
 
 
         // Instantiate the listener for the buttons,
-        // passing it in a reference to this class (SurgeryFrame)
+        // passing it in a reference to this class (TwitterFrame)
         // and assign it to the buttons
         ButtonsActionListener buttonListener = new ButtonsActionListener(this);
         addUserButton.addActionListener(buttonListener);
@@ -121,10 +121,11 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
         sideButtonPanel.add(deleteButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(updateButton);
+        sideButtonPanel.add(Box.createVerticalStrut(20));
+        sideButtonPanel.add(addTweetButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(showTweetsButton);
-        sideButtonPanel.add(Box.createVerticalStrut(5));
-        sideButtonPanel.add(addTweetButton);
+
 
         return sideButtonPanel;
     }
@@ -145,20 +146,19 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
             //Listener for button clicks.
             JButton sourceButton = (JButton) e.getSource();
 
+            // ------------------ADD USER BUTTON------------------
             if (sourceButton.equals(addUserButton)) {
 
-                // Launch a dialog and set its size when the add button is clicked
+                // Launch a dialog when the add button is clicked
                 AddUserDialog addUserDlg =
                         new AddUserDialog(this.outerClass, "Add User");
-
-                //addPatDlg.setSize(600, 200);
-
                 addUserDlg.setVisible(true);
 
+            // ------------------CLOSE BUTTON------------------
             } else if (sourceButton.equals(closeButton)) {
-
                 dispose();
 
+            // ------------------SHOW TWEETS BUTTON------------------
             } else if (sourceButton.equals(showTweetsButton)) {
                 // check if user is selected
                 if (usersTable.getSelectedRow() == -1) {
@@ -171,13 +171,11 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                     ShowTweetsDialog showTweetsDlg = new ShowTweetsDialog(this.outerClass, "Tweets", usersTable.getSelectedRow());
                     showTweetsDlg.setVisible(true);
                 }
-
+            // ------------------UPDATE BUTTON------------------
             } else if (sourceButton.equals(updateButton)) {
 
-                System.out.println("Update Clicked");
                 // check if row is selected
                 if (usersTable.getSelectedRow() == -1) {
-
                     JOptionPane.showMessageDialog(outerClass, "You need to select a user to update",
                             "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -191,6 +189,7 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                     updateUserDlg.setVisible(true);
                 }
             }
+            // ------------------ADD TWEET BUTTON------------------
             else if (sourceButton.equals(addTweetButton)) {
                 // check if user is selected
                 if (usersTable.getSelectedRow() == -1) {
@@ -204,12 +203,11 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                 }
             }
 
-             //This is the code that responds to the delete button
+             // ------------------DELETE BUTTON------------------
             else {
 
                 // check if row is selected
                 if (usersTable.getSelectedRow() == -1) {
-
                     JOptionPane.showMessageDialog(outerClass, "You need to select a table row",
                             "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -219,6 +217,7 @@ public class TwitterFrame extends JFrame implements ITwitterGUI{
                     String message = "Are you sure you want to delete this user??";
                     int answer =
                             JOptionPane.showConfirmDialog(outerClass, message);
+
                     if (answer == JOptionPane.YES_OPTION) {
                         TwitterController.getInstance().deleteUser(usersTable.getSelectedRow());
                     } else if (answer == JOptionPane.NO_OPTION) {

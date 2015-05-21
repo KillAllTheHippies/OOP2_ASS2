@@ -29,16 +29,16 @@ public class TwitterController {
 
     // ArrayList to store the newly added users
     private ArrayList<TwitterUser> newlyAddedUsers;
-    //Reference to the data model
 
+    //Reference to the data model
     private ArrayList<TwitterUser> dataModel;
-    //private ArrayList<Tweet> tweets;
+
     //Reference to the GUI
     //Any GUI which implements this interface can be
     //communicated with by this controller.
     private ITwitterGUI gui;
 
-    //Add a reference to the persistor.
+    //Reference to the persistor.
     private IPersistor persistor;
 
     //Default constructor
@@ -49,9 +49,7 @@ public class TwitterController {
     private TwitterController() {
 
         this.newlyAddedUsers = new ArrayList<TwitterUser>();
-        //Initialise the data model
-        //this.dataModel = new ArrayList<TwitterUser>();
-        //this.tweets = new ArrayList<Tweet>();
+
     }
 
     public void setDataModel(ArrayList<TwitterUser> dataModel) {
@@ -83,28 +81,38 @@ public class TwitterController {
     //the information filled in in the Add User dialog of the
     //GUI.
     public void createUser(String name, String country) {
+        // Create the new user
         TwitterUser u = new TwitterUser(name, country);
+
         // Update the datamodel
         this.dataModel.add(u);
+
         // Add the user to the arraylist of new users
         this.newlyAddedUsers.add(u);
-        // Commit the user to the database
+
+        // ------------------Commit the user to the database.------------------
         // (I have decided to commit each new user as they are added instead of adding a batch of new users
         // and committing them with a save button or on close. I thought because of the scale of this program
         // that this is the preferable way to do it so as to avoid loss of data if the program crashes
         // or there is a power loss. I have left in the functionality to add batches.)
         save();
+
         // Refresh the GUI
         this.gui.refreshGUI();
     }
 
     public void deleteUser(int index) {
+        // Get the name of the user
         String userName = this.dataModel.get(index).getUserName();
+
         // Remove the user from the datamodel
         this.dataModel.remove(index);
+
         // Delete the user from the database
         // Pass in the name of the user to be deleted to the deleteUser method of DatabasePersistor
         this.persistor.deleteUser(userName);
+
+        // Refresh GUI
         this.gui.refreshGUI();
     }
 
@@ -121,19 +129,25 @@ public class TwitterController {
 
         // Update the datamodel with the new user.
         this.dataModel.set(index, tempUser);
+
         // Update the database, pass in the original name, new name and new country
         this.persistor.updateUser(name, country, currentUserName);
+
         // Refresh the GUI
         this.gui.refreshGUI();
     }
 
     public void addTweetToUser(int index, Tweet tweet) {
+
         // Get the user to add the tweet to from the data model.
         TwitterUser tempUser = dataModel.get(index);
+
         // Add the tweet to the user.
         tempUser.addTweet(tweet);
+
         // Update the data model.
         dataModel.set(index, tempUser);
+
         // Add the tweet to the database
         this.persistor.addTweetToUser(tempUser.getUserName(), tweet);
     }

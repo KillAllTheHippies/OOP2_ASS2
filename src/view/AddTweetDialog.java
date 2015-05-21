@@ -39,15 +39,10 @@ public class AddTweetDialog extends JDialog {
         JPanel centerPanel = createCenterPanel();
         mainPanel.add(centerPanel, BorderLayout.CENTER);
 
-
-
-
         // add the main panel to the dialog
         this.getContentPane().add(mainPanel);
 
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-
-
 
         this.setSize(350, 180);
         this.setResizable(false);
@@ -61,7 +56,6 @@ public class AddTweetDialog extends JDialog {
         // create the panel
         JPanel centerPanel = new JPanel();
 
-
         // Create our text area
         this.txtTweet = new JTextArea("Enter tweet", 6, 30);
         txtTweet.setLineWrap(true);
@@ -74,9 +68,6 @@ public class AddTweetDialog extends JDialog {
 
         // add the textarea to the center panel
         centerPanel.add(txtTweet);
-
-
-
 
         return centerPanel;
     }
@@ -117,12 +108,14 @@ public class AddTweetDialog extends JDialog {
             if (sourceButton.equals(btnTweet)) {
                 // Get the text from the textArea
                 String tweet = txtTweet.getText();
+
                 // Create a new Tweet object and initialise the date
                 Date d = new Date(System.currentTimeMillis());
                 Tweet newTweet = new Tweet(tweet, d);
+
                 // Add the tweet to the user
                 TwitterController.getInstance().addTweetToUser(index, newTweet);
-                System.out.println("Tweet button clicked");
+
                 dispose();
             } else if (sourceButton.equals(btnCancel)) {
 

@@ -3,15 +3,14 @@ package view;
 
 import controller.TwitterController;
 import model.Tweet;
+import view.components.AutoResizingJTextArea;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 
 public class ShowTweetsDialog extends JDialog {

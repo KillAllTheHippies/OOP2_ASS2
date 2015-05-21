@@ -18,7 +18,7 @@ public class MainApplication {
         IPersistor persistor = new DatabasePersistor();
         TwitterController.getInstance().setPersistor(persistor);
 
-        // Create the model
+        // Create the model and instantiate the data in it from the persistor
         ArrayList<TwitterUser> dataModel = persistor.read();
 
         // Connect the controller to the model
